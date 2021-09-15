@@ -1,6 +1,6 @@
 const getMonth = (callback) => {
     setTimeout(() => {
-      let error = false;
+      let error = true;
       let month = [
         "January","February", "March", "April",
         "May", "June", "July", "August", "September",
@@ -15,12 +15,14 @@ const getMonth = (callback) => {
   };
   
   
-  const showMonth = (error, result) => {
+const showMonth = (error, result) => {
     if (error) {
       console.log(error);
+      // menaampilkan eror
     } else {
-      result.map((value) => {
-        console.log(value);
+      result.map((bulan) => {
+        console.log(bulan);
+        // menampilkan bulan
       });
     }
   };
