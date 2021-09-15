@@ -15,18 +15,12 @@ const cekHariKerja = (day) => {
     });
   };
   
-  // then untukmenghandle response sukses
-  //catch menghandle response tdksukses
+ // promise memkai then dan catch
+ //then jika kondisi nya sudah ditepati dan caatch jika gagal ditepati
+
+ //aasync await menggunakan try dan catch
   
-  
-  // const cekHariKerja2 = (day) => {
-  //   cekHariKerja(day)
-  //     .then((response) => console.log(response + ' adalah hari kerja'))
-  //     .catch((response) => console.log(response));
-  
-  // };
-  // cekHariKerja2("senin");
-  
+   
   const cekHariKerja3 = async (day) => {
     try {
       const response = await cekHariKerja(day);
@@ -37,3 +31,8 @@ const cekHariKerja = (day) => {
   };
   
   cekHariKerja3("sabtu");
+  
+  cekHariKerja('selasa')
+      .then((response) => console.log(response + ' adalah hari kerja'))
+      .catch((response) => console.log(response));
+ 
